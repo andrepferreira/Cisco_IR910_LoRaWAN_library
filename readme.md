@@ -1,3 +1,20 @@
+Cisco IR910 Library files
+=========================
+
+This is not actually a modified version of the library, but rather a cross compiled version to run on the Cisco IR910 router. The IR910 supports only version 1.7 and below owing to the "USB" style radio module interface. This interface was depreciated by Semtech in later versions due to performance issues.
+
+The only file required to be copied to the router is the library file:
+
+    libloragw.a
+    
+This file can be copied to the router virtual machine and safely deposited in the usr/lib folder. It is required for the logger application listed elsewhere on this repo. No config files are required.
+
+This library is currently configured for LoRaWAN transmissions, but can also be compiled for native LoRa if required by changing the required switch in the library.cfg file.
+
+=========================
+
+
+
 	 / _____)             _              | |    
 	( (____  _____ ____ _| |_ _____  ____| |__  
 	 \____ \| ___ |    (_   _) ___ |/ ___)  _ \ 
